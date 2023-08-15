@@ -2,9 +2,9 @@
 // ##                EJERCICIO 3                 ##
 // ################################################
 
-let array = [2, 4, 3, 6, 9, 8, 4];
+let array = [2, 4, 3, 6, 9, 8, 4, 6, 4, 5, 5, 5];
 
-function celcius(array, objetivo) {
+function filtradoArreglos(array, objetivo) {
     elements = [];
     for (let i = 0; i < array.length; i++) {
         for (let k = i + 1; k < array.length; k++) {
@@ -14,18 +14,18 @@ function celcius(array, objetivo) {
             }
         }
     }
-    //validacion de elementos repetidos 
 
+    //validacion de elementos repetidos 
     for (let i = 0; i < elements.length; i++) {
         for (let k = i + 1; k < elements.length; k++) {
-            if (elements[i][0] !== elements[k][1]) {
-                return elements;
-            }
-            else{
-                elements.pop()//eliminar repetidos
+            if (elements[i][0] === elements[k][1]) {
+                elements.splice(i, 1)//eliminar repetidos
+                i = 0
             }
         }
     }
+    return elements;
+
 }
 
-console.log(celcius(array, 10));
+console.log(filtradoArreglos(array, 10));

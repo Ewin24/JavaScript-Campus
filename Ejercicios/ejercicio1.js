@@ -4,8 +4,8 @@
 
 
 
-function edad(nacimiento, actual) {
+function edad(nacimiento,actual){
     console.log("Tu edad es: " + (actual - nacimiento) + " años")
 }
 
-console.log(edad(1985, 2023))
+console.log(edad(1985,2023))
