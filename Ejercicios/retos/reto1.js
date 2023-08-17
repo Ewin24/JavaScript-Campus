@@ -1,5 +1,5 @@
 // ################################################
-// ##                EJERCICIO 6                 ##
+// ##                   RETO 1                   ##
 // ################################################
 
 function newPassword(a, b) {
@@ -7,23 +7,36 @@ function newPassword(a, b) {
 
     if (constraints(a, b)) {
         if (a.length > b.length) {
-            while (condition) {
-                for (let i = 0; i < a.length; i++) {
-                    
+            for (let i = 0; i < a.length; i++) {
+                mergedString += a[i];
+                if (i < b.length) {
+                    mergedString += b[i];
                 }
             }
         }
-
+        if (a.length < b.length) {
+            for (let i = 0; i < b.length; i++) {
+                mergedString += b[i];
+                if (i < a.length) {
+                    mergedString += a[i];
+                }
+            }
+        } else {//caso en el que son iguales
+            for (let i = 0; i < b.length; i++) {
+                mergedString += a[i];
+                mergedString += b[i];
+            }
+        }
     }
     return mergedString;
 }
 
 function constraints(a, b) {
-    flag = flase;
-    if (a.length >= 1 && b.length <= 25000) {
+    let flag = false;
+    if (a.length <= 1 && b.length <= 25000) {
         console.log("Longitud incorrecta en la palabra")
     }
-    if ((/^([a-zA-ZñÑáéíóúÁÉÍÓÚ])+$/i.test(a)) && (/^([a-zA-ZñÑáéíóúÁÉÍÓÚ])+$/i.test(b))) {
+    if ((/^([-ñÑáéíóúÁÉÍÓÚ])+$/i.test(a)) && (/^([-ñÑáéíóúÁÉÍÓÚ])+$/i.test(b))) {
         console.log("Caracteres incorrectos")
     } else {
         console.log("Las entradas de datos son corerectas");
@@ -32,6 +45,4 @@ function constraints(a, b) {
     return flag;
 }
 
-console.log(
-    newPassword('abc', 'def')
-);
+console.log(newPassword('abc', 'defa'));
