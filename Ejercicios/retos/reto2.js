@@ -6,12 +6,12 @@ function projectCosts(array, target) {
 
     for (let x = 0; x < array.length; x++) {
         for (let y = x + 1; y < array.length; y++) {
-            if (5 <= array.length && array.length <= Math.pow(10, 5) && 0 < array[x] && array[x] <= 2 * Math.pow(10, 9) && array[x] != array[y] && 1 <= target && target <= Math.pow(10, 9)) {
-                flag = true;
+            if (5 <= (array.length) && (array.length - 1) <= Math.pow(10, 5) && 0 < array[x] && array[x] <= 2 * Math.pow(10, 9) && array[x] !== array[y] && 1 <= target && target <= Math.pow(10, 9)) {
+                if (x < array.length && y < array.length) {
+                    flag = true;
+                }
             }
         }
-
-
     }
 
     if (flag) {
