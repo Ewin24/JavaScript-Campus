@@ -26,8 +26,32 @@ let encabezado = async () => {
     let data = await fetch(nombreArchivo + '.json');
     let dataJson = await data.json();
     const elementoPadre = document.querySelector('#pricing-header');
-    let elemento = '<h1 class="display-4 fw-normal text-body-emphasis">Element</h1>'
+    let elemento = `
+    <h1 class="display-4 fw-normal text-body-emphasis">
+        ${dataJson.encabezado.titulo}
+    </h1>
+    ${dataJson.encabezado.lista.map((value) =>
+        `
+        <div class="d-flex">
+                ${value.imagen} 
+            <p class="mt-1 ms-2">
+                ${value.texto}  
+            </p>
+        </div>
+        `
+    ).join(" ")
+        }
+    `;
     elementoPadre.insertAdjacentHTML("beforeend", elemento);
 }
 
 encabezado()
+
+
+let cargarTarjetas = async () => {
+    let datos = await fetch(nombreArchivo + '.json');
+    let dataJson = await datos.json();
+    const elementoPadre = 
+
+
+}
