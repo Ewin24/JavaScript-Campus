@@ -44,14 +44,29 @@ let encabezado = async () => {
     `;
     elementoPadre.insertAdjacentHTML("beforeend", elemento);
 }
-
 encabezado()
 
 
 let cargarTarjetas = async () => {
     let datos = await fetch(nombreArchivo + '.json');
     let dataJson = await datos.json();
-    const elementoPadre = 
-
-
+    const elementoPadre = document.querySelector('#cards-col');
+    let tarjetas = /*html*/ `
+    ${dataJson.tarjetas.lista.map((value) => `
+    <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">${value.titulo}</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">${value.precio}</h1>
+                <button type="button" class="w-100 btn btn-lg btn-outline-danger">${value.boton}</button>
+            </div>
+        </div>
+    </div>
+    `
+    ).join(" ")}
+    `;
+    elementoPadre.insertAdjacentHTML('beforeend', tarjetas);
 }
+cargarTarjetas();

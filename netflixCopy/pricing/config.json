@@ -12,6 +12,42 @@
             },
             {
                 "imagen": "<svg class='bi mt-2' width='24' height='24'><use xlink:href='#check' /></svg>",
+                "texto": "Change or cancel your plan anytime."
+            }
+        ]
+    },
+    "tarjetas": {
+        "lista": [
+            {
+                "titulo": "Basic",
+                "precio": "COP $16.000",
+                "boton": "Get"
+            },
+            {
+                "titulo": "Standard",
+                "precio": "COP $26.000",
+                "boton": "Get"
+            },
+            {
+                "titulo": "Standard",
+                "precio": "COP $26.000",
+                "boton": "Get"
+            }
+        ]
+    },
+    "footer": {
+        "titulo": "Choose the plan that’s right for you",
+        "lista": [
+            {
+                "imagen": "<svg class='bi mt-2' width='24' height='24'><use xlink:href='#check' /></svg>",
+                "texto": "Watch all you want. Ad-free."
+            },
+            {
+                "imagen": "<svg class='bi mt-2' width='24' height='24'><use xlink:href='#check' /></svg>",
+                "texto": "Recommendations just for you."
+            },
+            {
+                "imagen": "<svg class='bi mt-2' width='24' height='24'><use xlink:href='#check' /></svg>",
                 "texto": "Watch all you want. Ad-free."
             }
         ]
