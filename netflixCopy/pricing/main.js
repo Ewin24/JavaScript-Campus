@@ -33,9 +33,9 @@ let encabezado = async () => {
     ${dataJson.encabezado.lista.map((value) =>
         `
         <div class="d-flex">
-                ${value.imagen} 
+                ${value.imagen}
             <p class="mt-1 ms-2">
-                ${value.texto}  
+                ${value.texto}
             </p>
         </div>
         `
@@ -68,5 +68,40 @@ let cargarTarjetas = async () => {
     ).join(" ")}
     `;
     elementoPadre.insertAdjacentHTML('beforeend', tarjetas);
-}
+};
 cargarTarjetas();
+
+
+let cargarTabla = async () => {
+    let datos = await fetch(nombreArchivo + '.json');
+    let dataJson = await datos.json();
+    const elementoPadre = document.querySelector('#table');
+    //destructuring de los datos thead
+    const [firstH, ...restH] = dataJson.table.thead;
+    //destructuring de los datos tbody
+    // const [firstBody, ...restBody] = dataJson.table.tbody;
+    let tableElements = /*html*/ `
+    <thead>
+        <tr>
+            <th style="width: 22%;">
+                ${firstH.th}
+            </th>
+            ${restH.map((value) => `
+                <th class="text-center" style="width: 22%;">
+                    ${value.th}
+                </th>
+              `
+    ).join(" ")}
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        
+        </tr>
+    </tbody>
+
+    `;
+    elementoPadre.insertAdjacentHTML('beforeend', tableElements);
+};
+
+cargarTabla();
