@@ -35,23 +35,6 @@
             }
         ]
     },
-    "footer": {
-        "titulo": "Choose the plan that’s right for you",
-        "lista": [
-            {
-                "imagen": "<svg class='bi mt-2' width='24' height='24'><use xlink:href='#check' /></svg>",
-                "texto": "Watch all you want. Ad-free."
-            },
-            {
-                "imagen": "<svg class='bi mt-2' width='24' height='24'><use xlink:href='#check' /></svg>",
-                "texto": "Recommendations just for you."
-            },
-            {
-                "imagen": "<svg class='bi mt-2' width='24' height='24'><use xlink:href='#check' /></svg>",
-                "texto": "Watch all you want. Ad-free."
-            }
-        ]
-    },
     "tabla": {
         "thead": [
             {
@@ -121,6 +104,57 @@
                     },
                     {
                         "contenido": "<svg class='bi mt-2' width='24' height='24'><use xlink:href='#check' /></svg>"
+                    }
+                ]
+            }
+        ]
+    },
+    "parrafo": [
+        {
+            "contenido": "HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See our Terms of Use for more details. "
+        },
+        {
+            "contenido": "Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard and 1 with Basic."
+        }
+    ],
+    "footer": {
+        "logoSrc": "../assets/brand/icons8-netflix.svg",
+        "logoAlt": "Netflix Logo",
+        "copyText": "Campuslands 2023 Bucaramanga",
+        "sections": [
+            {
+                "items": [
+                    {
+                        "link": "#",
+                        "text": "FAQ"
+                    },
+                    {
+                        "link": "#",
+                        "text": "Privacy"
+                    }
+                ]
+            },
+            {
+                "items": [
+                    {
+                        "link": "#",
+                        "text": "Help Center"
+                    },
+                    {
+                        "link": "#",
+                        "text": "Cookie Preferences"
+                    }
+                ]
+            },
+            {
+                "items": [
+                    {
+                        "link": "#",
+                        "text": "Netflix Shop"
+                    },
+                    {
+                        "link": "#",
+                        "text": "Corporate Information"
                     }
                 ]
             }

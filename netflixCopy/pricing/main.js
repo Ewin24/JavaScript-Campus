@@ -111,5 +111,49 @@ let cargarTabla = async () => {
     `;
     elementoPadre.insertAdjacentHTML('beforeend', tableElements);
 };
-
 cargarTabla();
+
+
+let cargarParrafos = async () => {
+    let datos = await fetch(nombreArchivo + '.json');
+    let dataJson = await datos.json();
+    const elementoPadre = document.querySelector('#parrafo');
+    let parrafos = `
+    ${dataJson.parrafo.map((value) => `
+    <p>
+        ${value.contenido}
+    </p>
+        `).join("")}
+    `;
+    elementoPadre.insertAdjacentHTML('beforeend', parrafos);
+};
+
+cargarParrafos();
+
+let cargarFooter = async () => {
+    let datos = await fetch(nombreArchivo + '.json');
+    let dataJson = await datos.json();
+    const elementoPadre = document.querySelector('footer');
+    let footerContent = `
+        <div class="row">
+            <div class="col-12 col-md">
+                <img class="mb-2" src="${dataJson.footer.logoSrc}" alt="${dataJson.footer.logoAlt}" width="24" height="19">
+                <small class="d-block mb-3 text-body-secondary">&copy; ${dataJson.footer.copyText}</small>
+            </div>
+            ${dataJson.footer.sections.map((section) => `
+                <div class="col-6 col-md">
+                    <ul class="list-unstyled text-small">
+                        ${section.items.map((item) => `
+                            <li class="mb-1"><a class="link-secondary text-decoration-none" href="${item.link}">${item.text}</a></li>
+                        `).join("")}
+                    </ul>
+                </div>
+            `).join("")}
+        </div>
+    `;
+    elementoPadre.insertAdjacentHTML('beforeend', footerContent);
+};
+
+cargarFooter();
+
+
