@@ -52,7 +52,7 @@
             }
         ]
     },
-    "table": {
+    "tabla": {
         "thead": [
             {
                 "th": "Features"
@@ -71,25 +71,57 @@
             {
                 "descripcion": "Monthly Price",
                 "opciones": [
-                    "$16,900",
-                    "$26,900",
-                    "38,900"
+                    {
+                        "contenido": "$16,900"
+                    },
+                    {
+                        "contenido": "$26,900"
+                    },
+                    {
+                        "contenido": "38,900"
+                    }
                 ]
             },
             {
                 "descripcion": "Video Quality",
                 "opciones": [
-                    "$Good",
-                    "$Better",
-                    "Best"
+                    {
+                        "contenido": "Good"
+                    },
+                    {
+                        "contenido": "Better"
+                    },
+                    {
+                        "contenido": "Best"
+                    }
                 ]
             },
             {
                 "descripcion": "Monthly Price",
                 "opciones": [
-                    "$720p",
-                    "$1080p",
-                    "4K + HDR"
+                    {
+                        "contenido": "720p"
+                    },
+                    {
+                        "contenido": "1080p"
+                    },
+                    {
+                        "contenido": "4K + HDR"
+                    }
+                ]
+            },
+            {
+                "descripcion": "Watch on your TV, computer, mobilephone and tablet",
+                "opciones": [
+                    {
+                        "contenido": "<svg class='bi mt-2' width='24' height='24'><use xlink:href='#check' /></svg>"
+                    },
+                    {
+                        "contenido": "<svg class='bi mt-2' width='24' height='24'><use xlink:href='#check' /></svg>"
+                    },
+                    {
+                        "contenido": "<svg class='bi mt-2' width='24' height='24'><use xlink:href='#check' /></svg>"
+                    }
                 ]
             }
         ]

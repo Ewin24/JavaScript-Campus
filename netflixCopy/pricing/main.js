@@ -39,8 +39,7 @@ let encabezado = async () => {
             </p>
         </div>
         `
-    ).join(" ")
-        }
+    ).join(" ")}
     `;
     elementoPadre.insertAdjacentHTML("beforeend", elemento);
 }
@@ -77,7 +76,7 @@ let cargarTabla = async () => {
     let dataJson = await datos.json();
     const elementoPadre = document.querySelector('#table');
     //destructuring de los datos thead
-    const [firstH, ...restH] = dataJson.table.thead;
+    const [firstH, ...restH] = dataJson.tabla.thead;
     //destructuring de los datos tbody
     // const [firstBody, ...restBody] = dataJson.table.tbody;
     let tableElements = /*html*/ `
@@ -87,19 +86,28 @@ let cargarTabla = async () => {
                 ${firstH.th}
             </th>
             ${restH.map((value) => `
-                <th class="text-center" style="width: 22%;">
-                    ${value.th}
-                </th>
+            <th class="text-center" style="width: 22%;">
+                ${value.th}
+            </th>
               `
     ).join(" ")}
         </tr>
     </thead>
+    
     <tbody>
+    ${dataJson.tabla.tbody.map((row) => `
         <tr>
-        
+            <td>
+                ${row.descripcion}
+            </td>
+            ${row.opciones.map((option) => `
+                <td class="text-center">
+                    ${option.contenido}
+                </td>
+            `).join("")}
         </tr>
+    `).join("")}
     </tbody>
-
     `;
     elementoPadre.insertAdjacentHTML('beforeend', tableElements);
 };
