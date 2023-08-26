@@ -51,5 +51,47 @@
                 "texto": "Watch all you want. Ad-free."
             }
         ]
+    },
+    "table": {
+        "thead": [
+            {
+                "th": "Features"
+            },
+            {
+                "th": "Basic"
+            },
+            {
+                "th": "Standard"
+            },
+            {
+                "th": "Premium"
+            }
+        ],
+        "tbody": [
+            {
+                "descripcion": "Monthly Price",
+                "opciones": [
+                    "$16,900",
+                    "$26,900",
+                    "38,900"
+                ]
+            },
+            {
+                "descripcion": "Video Quality",
+                "opciones": [
+                    "$Good",
+                    "$Better",
+                    "Best"
+                ]
+            },
+            {
+                "descripcion": "Monthly Price",
+                "opciones": [
+                    "$720p",
+                    "$1080p",
+                    "4K + HDR"
+                ]
+            }
+        ]
     }
 }
